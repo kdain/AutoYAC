@@ -1,0 +1,12 @@
+#!/bin/bash
+chmod 666 /etc/yaclist
+rm /etc/yaclist
+CurValue=100
+MaxValue=150
+while [ $CurValue -le $MaxValue ]
+do
+nc -z -v -w 1 192.168.1.$CurValue 10629 2>&1 | grep succeed | cut -d " " -f 3,4 >> /etc/yaclist
+
+let CurValue++
+done
+chmod 666 /etc/yaclist
