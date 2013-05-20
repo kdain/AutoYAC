@@ -1,8 +1,14 @@
 #!/bin/bash
 chmod 666 /etc/yaclist
 rm /etc/yaclist
+#
+# *** Edit DHCP Range below (or valid Static IP Range) ***
+#
 CurValue=100
 MaxValue=150
+#
+# *** Do NOT edit below this line ***
+#
 while [ $CurValue -le $MaxValue ]
 do
 nc -z -v -w 1 192.168.1.$CurValue 10629 2>&1 | grep succeed | cut -d " " -f 3,4 >> /etc/yaclist
