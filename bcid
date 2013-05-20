@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read A
+for ip in $(cut -d " " -f 1 /etc/yaclist); do
+
+echo -n -e "$A"  | nc -n -w 1 $ip 10629
+
+done
