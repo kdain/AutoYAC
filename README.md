@@ -15,3 +15,7 @@ and also on my other machines that have the YAC listener installed.
 Google sunflowerhead to find the YAC listener.
 
 
+bcid may also be used to send short text messages to all YAC listeners.
+
+Example: echo Lunch is ready | bcid
+
