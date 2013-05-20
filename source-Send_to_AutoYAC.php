@@ -11,7 +11,7 @@
 // AutoYAC depends on the scripts /bin/getlist (saves list of active YAC
 // clients), /bin/bcid (reads the list and sends data to clients)
 
-$source_desc = "This source will send the Caller ID info to an automatically ge
+$source_desc = "This source will send the Caller ID info to an automatically generated list of YAC Listeners on your network for external processing.<br>The message will be sent as a Call notification<br>This datasource should be one of the last data sources on your list, as it does not provide any data of its own, and can only send what information has been collected before it is run.<br>This data source requires Superfecta Module version 2.2.3 or higher.";
 
 
 if($usage_mode == 'post processing')
@@ -24,7 +24,7 @@ if($usage_mode == 'post processing')
 
                 if($debug)
                 {
-                        print 'Send to AutoYAC: '.$first_caller_id.''.$thenumbe
+                        print 'Send to AutoYAC: '.$first_caller_id.''.$thenumber.'<br><br>';
 
 
 
@@ -32,4 +32,3 @@ if($usage_mode == 'post processing')
 
 }
 ?>
-
